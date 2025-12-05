@@ -15,7 +15,13 @@
     <meta property="og:title" content="TopKazino UZ - Eng Yaxshi Onlayn Kazino 2025">
     <meta property="og:description" content="O'zbekistonda ishonchli onlayn kazino va sport garovlari. Katta bonuslar!">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font with display=swap to prevent render blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
     <style>
         * {
             margin: 0;
@@ -24,12 +30,12 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
         }
 
-        .header {
+        header {
             padding: 40px 20px;
             text-align: center;
             background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
@@ -37,7 +43,7 @@
 
         .logo-text {
             font-size: 32px;
-            font-weight: 900;
+            font-weight: 800;
             color: #fff;
             margin-bottom: 10px;
             letter-spacing: 2px;
@@ -48,7 +54,7 @@
         }
 
         .subtitle {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.8);
             font-size: 14px;
             margin-bottom: 30px;
         }
@@ -125,18 +131,18 @@
             display: inline-block;
         }
 
-        .content {
+        main {
             background: #fff;
             padding: 40px 20px 50px;
             color: #1a1a2e;
         }
 
         .content-wrapper {
-            max-width: 100%;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .content h1 {
+        main h1 {
             font-size: 24px;
             font-weight: 800;
             text-align: center;
@@ -157,11 +163,13 @@
             padding: 20px 15px;
             border-radius: 12px;
             text-align: center;
+            min-height: 80px;
         }
 
         .feature-icon {
             font-size: 28px;
             margin-bottom: 10px;
+            line-height: 1;
         }
 
         .feature-title {
@@ -170,14 +178,14 @@
             color: #1a1a2e;
         }
 
-        .content p {
+        main p {
             font-size: 15px;
             line-height: 1.8;
             margin-bottom: 20px;
             color: #444;
         }
 
-        .content h2 {
+        main h2 {
             font-size: 20px;
             font-weight: 700;
             margin-top: 35px;
@@ -225,29 +233,28 @@
             font-size: 14px;
         }
 
-        .footer {
+        footer {
             background: #1a1a2e;
             padding: 30px 20px;
             text-align: center;
         }
 
         .footer-text {
-            color: rgba(255,255,255,0.6);
+            color: #fff;
             font-size: 14px;
+            margin-bottom: 15px;
         }
 
         .disclaimer {
-            color: rgba(255,255,255,0.4);
-            font-size: 11px;
-            margin-top: 20px;
+            color: #a0aec0;
+            font-size: 12px;
             line-height: 1.6;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
         @media (min-width: 768px) {
-            .header {
+            header {
                 padding: 60px 40px;
             }
 
@@ -265,16 +272,11 @@
                 font-size: 16px;
             }
 
-            .content {
+            main {
                 padding: 60px 40px 70px;
             }
 
-            .content-wrapper {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            .content h1 {
+            main h1 {
                 font-size: 34px;
             }
 
@@ -282,11 +284,11 @@
                 grid-template-columns: repeat(4, 1fr);
             }
 
-            .content p {
+            main p {
                 font-size: 17px;
             }
 
-            .content h2 {
+            main h2 {
                 font-size: 26px;
             }
         }
@@ -301,56 +303,52 @@
                 font-size: 12px;
             }
 
-            .content h1 {
+            main h1 {
                 font-size: 20px;
-            }
-
-            .features {
-                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="logo-text">TOP<span>KAZINO</span></div>
+    <header>
+        <div class="logo-text" role="banner">TOP<span>KAZINO</span></div>
         <p class="subtitle">O'zbekistonda eng yaxshi kazino va sport garovlari</p>
 
-        <div class="header-buttons">
+        <nav class="header-buttons" aria-label="Asosiy navigatsiya">
             <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-green">Ro'yxatdan o'tish</a>
             <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-blue">Kirish</a>
-        </div>
+        </nav>
 
         <div class="promo-box">
             <div class="promo-text">PROMO KOD: <span>uzbs</span></div>
         </div>
 
         <div class="bonus-badge">500% BONUS</div>
-    </div>
+    </header>
 
-    <div class="content">
+    <main>
         <div class="content-wrapper">
             <h1>O'zbekistonda Eng Yaxshi Onlayn Kazino va Sport Garovlari Platformasi</h1>
 
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🎰</div>
+            <section class="features" aria-label="Xususiyatlar">
+                <article class="feature">
+                    <div class="feature-icon" aria-hidden="true">🎰</div>
                     <div class="feature-title">1500+ Slotlar</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚽</div>
+                </article>
+                <article class="feature">
+                    <div class="feature-icon" aria-hidden="true">⚽</div>
                     <div class="feature-title">Sport Garovlari</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🚀</div>
+                </article>
+                <article class="feature">
+                    <div class="feature-icon" aria-hidden="true">🚀</div>
                     <div class="feature-title">Aviator</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">💳</div>
+                </article>
+                <article class="feature">
+                    <div class="feature-icon" aria-hidden="true">💳</div>
                     <div class="feature-title">Tez To'lovlar</div>
-                </div>
-            </div>
+                </article>
+            </section>
 
             <p>Bizning platformamiz O'zbekistonda eng ishonchli onlayn kazino va sport garovlari xizmatlarini taqdim etadi. Minglab slot o'yinlari, jonli kazino, sport tikish va crash o'yinlar - barchasi bir joyda!</p>
 
@@ -365,11 +363,11 @@
             <p>Aviator, Lucky Jet, JetX kabi mashhur crash o'yinlar. Pragmatic Play, NetEnt, Microgaming va boshqa yetakchi provayderlardan 1500 dan ortiq slot. Jonli ruletka, blackjack, baccarat va poker.</p>
 
             <h2>Tez va xavfsiz to'lovlar</h2>
-            <div class="payment-methods">
-                <span class="payment">💳 Payme</span>
-                <span class="payment">💳 Click</span>
-                <span class="payment">💳 UzCard</span>
-                <span class="payment">💳 Humo</span>
+            <div class="payment-methods" role="list" aria-label="To'lov usullari">
+                <span class="payment" role="listitem">💳 Payme</span>
+                <span class="payment" role="listitem">💳 Click</span>
+                <span class="payment" role="listitem">💳 UzCard</span>
+                <span class="payment" role="listitem">💳 Humo</span>
             </div>
             <p>Minimal depozit 10,000 so'm. Pul yechish 15 daqiqadan 24 soatgacha. Komissiyasiz!</p>
 
@@ -378,12 +376,12 @@
 
             <a href="https://1wpyio.com/?open=register&p=oowe" class="cta-button">Bonusni olish</a>
         </div>
-    </div>
+    </main>
 
-    <div class="footer">
+    <footer>
         <p class="footer-text">© 2025 TopKazino UZ. 18+</p>
         <p class="disclaimer">Ushbu veb-sayt faqat axborot maqsadlarida taqdim etilgan. Biz qimor o'yinlarini o'ynashga undamaymiz. Qimor o'yinlari moliyaviy yo'qotishlarga olib kelishi mumkin. Faqat 18 yoshdan oshganlar uchun. Mas'uliyat bilan o'ynang.</p>
-    </div>
+    </footer>
 
 </body>
 </html>
