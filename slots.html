@@ -23,7 +23,9 @@
         nav { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         nav a { color: #e2e8f0; text-decoration: none; font-size: 14px; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; }
         nav a:hover, nav a.active { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
-        .hero { background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%); padding: 60px 20px; text-align: center; }
+        .hero { background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%); padding: 60px 20px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: '🎰'; position: absolute; top: 15%; right: 8%; font-size: 80px; opacity: 0.2; pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to top, rgba(255,255,255,0.1), transparent); pointer-events: none; }
         .hero h1 { font-size: 36px; color: #fff; margin-bottom: 15px; }
         .hero p { color: rgba(255,255,255,0.9); font-size: 18px; max-width: 600px; margin: 0 auto 25px; }
         .btn { display: inline-block; padding: 16px 40px; border-radius: 10px; font-weight: 700; font-size: 16px; text-transform: uppercase; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
@@ -52,7 +54,16 @@
         footer { background: #0f172a; padding: 30px 20px; text-align: center; }
         .footer-text { color: #fff; font-size: 14px; margin-bottom: 10px; }
         .disclaimer { color: #cbd5e1; font-size: 13px; max-width: 600px; margin: 0 auto; }
-        @media (max-width: 768px) { .hero h1 { font-size: 28px; } h2 { font-size: 24px; } }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+            .slot-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .slot-card { padding: 20px 15px; }
+            .slot-card h4 { font-size: 15px; }
+            .slot-card p { font-size: 12px; }
+            .provider-list { gap: 10px; }
+            .provider { padding: 10px 15px; font-size: 13px; }
+        }
     </style>
 </head>
 <body>
@@ -71,13 +82,12 @@
     </header>
 
     <main id="main-content">
-    <section class="hero">
-        <h1>Onlayn Slot O'yinlari</h1>
-        <p>1500+ dan ortiq slot o'yinlari! Sweet Bonanza, Gates of Olympus, Big Bass va ko'plab boshqalar.</p>
-        <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-green">Slotlarni O'ynash</a>
-    </section>
+        <section class="hero">
+            <h1>Onlayn Slot O'yinlari</h1>
+            <p>1500+ dan ortiq slot o'yinlari! Sweet Bonanza, Gates of Olympus, Big Bass va ko'plab boshqalar.</p>
+            <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-green">Slotlarni O'ynash</a>
+        </section>
 
-    <main>
         <div class="content">
             <h2>Onlayn Slotlar Haqida</h2>
             <p>Onlayn slotlar - bu kazino o'yinlarining eng mashhur turi. Ular oddiy qoidalarga ega, lekin katta yutish imkoniyatini beradi. Bizning platformamizda 1500 dan ortiq slot o'yinlari mavjud - har bir did uchun!</p>

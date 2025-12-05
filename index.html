@@ -38,7 +38,9 @@
         .main-nav a:hover, .main-nav a.active { background: rgba(34, 197, 94, 0.3); color: #22c55e; }
 
         /* Hero Section */
-        .hero { padding: 50px 20px; text-align: center; }
+        .hero { padding: 50px 20px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
         .hero h1 { font-size: 36px; color: #fff; margin-bottom: 15px; line-height: 1.2; }
         .hero p { color: #e2e8f0; font-size: 18px; max-width: 600px; margin: 0 auto 25px; }
 
@@ -107,12 +109,25 @@
             .section-title { font-size: 24px; }
             .main-nav a { font-size: 12px; padding: 8px 12px; }
             .btn { padding: 14px 30px; font-size: 14px; }
+            .games-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .game-card { padding: 20px 15px; }
+            .game-card .icon { font-size: 36px; }
+            .game-card h3 { font-size: 16px; }
+            .game-card p { font-size: 12px; margin-bottom: 15px; }
+            .game-card .btn { padding: 10px 20px; font-size: 12px; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .feature-card { padding: 20px 15px; }
+            .feature-card .icon { font-size: 32px; }
+            .feature-card h3 { font-size: 14px; }
+            .feature-card p { font-size: 12px; }
         }
         @media (max-width: 480px) {
             .logo-text { font-size: 26px; }
             .hero h1 { font-size: 24px; }
             .hero-buttons { flex-direction: column; align-items: center; }
             .btn { width: 100%; max-width: 280px; }
+            .games-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
         }
     </style>
 </head>
