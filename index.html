@@ -15,372 +15,262 @@
     <meta property="og:title" content="TopKazino UZ - Eng Yaxshi Onlayn Kazino 2025">
     <meta property="og:description" content="O'zbekistonda ishonchli onlayn kazino va sport garovlari. Katta bonuslar!">
 
-    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Font with display=swap to prevent render blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; }
+
+        /* Header */
+        header { padding: 20px; text-align: center; }
+        .logo-text { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: 2px; text-decoration: none; display: inline-block; }
+        .logo-text span { color: #22c55e; }
+
+        /* Navigation */
+        nav { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 0 10px; }
+        nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; padding: 10px 16px; border-radius: 25px; transition: all 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+
+        /* Hero Section */
+        .hero { padding: 50px 20px; text-align: center; }
+        .hero h1 { font-size: 36px; color: #fff; margin-bottom: 15px; line-height: 1.2; }
+        .hero p { color: rgba(255,255,255,0.8); font-size: 18px; max-width: 600px; margin: 0 auto 25px; }
+
+        .hero-buttons { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 16px 40px; border-radius: 10px; font-weight: 700; font-size: 16px; text-transform: uppercase; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .btn-green { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: #fff; }
+        .btn-blue { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; }
+
+        .promo-box { display: inline-flex; align-items: center; gap: 12px; background: rgba(34, 197, 94, 0.15); border: 2px solid #22c55e; border-radius: 30px; padding: 12px 30px; margin-bottom: 15px; }
+        .promo-text { color: #fff; font-size: 16px; font-weight: 700; }
+        .promo-text span { color: #22c55e; font-size: 18px; }
+        .bonus-badge { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; padding: 10px 25px; border-radius: 25px; font-weight: 700; font-size: 16px; display: inline-block; }
+
+        /* Games Section */
+        .games-section { background: #fff; padding: 50px 20px; }
+        .section-title { font-size: 28px; font-weight: 800; text-align: center; color: #1a1a2e; margin-bottom: 40px; }
+        .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+        .game-card { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 30px; border-radius: 20px; text-align: center; color: #fff; transition: transform 0.3s; }
+        .game-card:hover { transform: translateY(-5px); }
+        .game-card .icon { font-size: 50px; margin-bottom: 15px; }
+        .game-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .game-card p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 20px; line-height: 1.6; }
+        .game-card .btn { padding: 12px 30px; font-size: 14px; }
+
+        /* Features Section */
+        .features-section { background: #f8fafc; padding: 50px 20px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 30px 20px; border-radius: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .feature-card .icon { font-size: 40px; margin-bottom: 15px; }
+        .feature-card h4 { color: #1a1a2e; font-size: 16px; margin-bottom: 8px; }
+        .feature-card p { color: #64748b; font-size: 14px; }
+
+        /* Info Section */
+        .info-section { background: #fff; padding: 50px 20px; }
+        .info-content { max-width: 900px; margin: 0 auto; }
+        .info-content h2 { font-size: 24px; color: #1a1a2e; margin: 35px 0 15px; }
+        .info-content p { font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 15px; }
+        .info-content ul { margin: 15px 0 15px 25px; }
+        .info-content li { font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 8px; }
+
+        /* Payment Section */
+        .payment-section { background: #f8fafc; padding: 40px 20px; text-align: center; }
+        .payment-methods { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 600px; margin: 20px auto; }
+        .payment { background: #fff; padding: 15px 25px; border-radius: 10px; font-weight: 600; color: #1a1a2e; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        /* CTA Section */
+        .cta-section { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); padding: 60px 20px; text-align: center; }
+        .cta-section h2 { color: #fff; font-size: 32px; margin-bottom: 15px; }
+        .cta-section p { color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 25px; }
+        .cta-section .btn { background: #fff; color: #16a34a; }
+        .cta-section .btn:hover { background: #f0fdf4; }
+
+        /* Footer */
+        footer { background: #1a1a2e; padding: 40px 20px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-links a:hover { color: #22c55e; }
+        .footer-text { color: #fff; font-size: 14px; margin-bottom: 15px; }
+        .disclaimer { color: #64748b; font-size: 12px; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .section-title { font-size: 24px; }
+            nav a { font-size: 12px; padding: 8px 12px; }
+            .btn { padding: 14px 30px; font-size: 14px; }
         }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-        }
-
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
-        }
-
-        .logo-text {
-            font-size: 32px;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-
-        .logo-text span {
-            color: #22c55e;
-        }
-
-        .subtitle {
-            color: rgba(255,255,255,0.8);
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .header-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 16px 24px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            cursor: pointer;
-            text-decoration: none;
-            border: none;
-            text-align: center;
-            letter-spacing: 0.5px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-
-        .btn-green {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-            color: #fff;
-        }
-
-        .btn-blue {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: #fff;
-        }
-
-        .promo-box {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(34, 197, 94, 0.15);
-            border: 2px solid #22c55e;
-            border-radius: 30px;
-            padding: 12px 30px;
-        }
-
-        .promo-text {
-            color: #fff;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .promo-text span {
-            color: #22c55e;
-            font-size: 18px;
-        }
-
-        .bonus-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 14px;
-            margin-top: 20px;
-            display: inline-block;
-        }
-
-        main {
-            background: #fff;
-            padding: 40px 20px 50px;
-            color: #1a1a2e;
-        }
-
-        .content-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        main h1 {
-            font-size: 24px;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 30px;
-            line-height: 1.4;
-            color: #1a1a2e;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .feature {
-            background: #f8fafc;
-            padding: 20px 15px;
-            border-radius: 12px;
-            text-align: center;
-            min-height: 80px;
-        }
-
-        .feature-icon {
-            font-size: 28px;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .feature-title {
-            font-weight: 700;
-            font-size: 14px;
-            color: #1a1a2e;
-        }
-
-        main p {
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #444;
-        }
-
-        main h2 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            color: #1a1a2e;
-        }
-
-        .cta-button {
-            display: block;
-            width: 100%;
-            max-width: 400px;
-            margin: 35px auto;
-            padding: 18px 30px;
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-            color: #fff;
-            text-align: center;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
-        }
-
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 30px 0;
-            padding: 20px;
-            background: #f8fafc;
-            border-radius: 12px;
-        }
-
-        .payment {
-            font-weight: 600;
-            color: #16213e;
-            font-size: 14px;
-        }
-
-        footer {
-            background: #1a1a2e;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .footer-text {
-            color: #fff;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .disclaimer {
-            color: #a0aec0;
-            font-size: 12px;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 768px) {
-            header {
-                padding: 60px 40px;
-            }
-
-            .logo-text {
-                font-size: 42px;
-            }
-
-            .header-buttons {
-                max-width: 500px;
-                gap: 20px;
-            }
-
-            .btn {
-                padding: 18px 36px;
-                font-size: 16px;
-            }
-
-            main {
-                padding: 60px 40px 70px;
-            }
-
-            main h1 {
-                font-size: 34px;
-            }
-
-            .features {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            main p {
-                font-size: 17px;
-            }
-
-            main h2 {
-                font-size: 26px;
-            }
-        }
-
         @media (max-width: 480px) {
-            .logo-text {
-                font-size: 26px;
-            }
-
-            .btn {
-                padding: 14px 16px;
-                font-size: 12px;
-            }
-
-            main h1 {
-                font-size: 20px;
-            }
+            .logo-text { font-size: 26px; }
+            .hero h1 { font-size: 24px; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 280px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-text" role="banner">TOP<span>KAZINO</span></div>
-        <p class="subtitle">O'zbekistonda eng yaxshi kazino va sport garovlari</p>
-
-        <nav class="header-buttons" aria-label="Asosiy navigatsiya">
-            <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-green">Ro'yxatdan o'tish</a>
-            <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-blue">Kirish</a>
+        <a href="/" class="logo-text">TOP<span>KAZINO</span></a>
+        <nav>
+            <a href="/" class="active">Bosh sahifa</a>
+            <a href="/aviator.html">Aviator</a>
+            <a href="/lucky-jet.html">Lucky Jet</a>
+            <a href="/slots.html">Slotlar</a>
+            <a href="/live-casino.html">Live Kazino</a>
+            <a href="/sport.html">Sport</a>
+            <a href="/bonus.html">Bonuslar</a>
         </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O'zbekistonda Eng Yaxshi Onlayn Kazino</h1>
+        <p>1500+ o'yinlar, sport garovlari, crash o'yinlar. Tez to'lovlar va katta bonuslar!</p>
+
+        <div class="hero-buttons">
+            <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-green">Ro'yxatdan O'tish</a>
+            <a href="https://1wpyio.com/?open=register&p=oowe" class="btn btn-blue">Kirish</a>
+        </div>
 
         <div class="promo-box">
             <div class="promo-text">PROMO KOD: <span>uzbs</span></div>
         </div>
-
+        <br><br>
         <div class="bonus-badge">500% BONUS</div>
-    </header>
+    </section>
 
-    <main>
-        <div class="content-wrapper">
-            <h1>O'zbekistonda Eng Yaxshi Onlayn Kazino va Sport Garovlari Platformasi</h1>
-
-            <section class="features" aria-label="Xususiyatlar">
-                <article class="feature">
-                    <div class="feature-icon" aria-hidden="true">🎰</div>
-                    <div class="feature-title">1500+ Slotlar</div>
-                </article>
-                <article class="feature">
-                    <div class="feature-icon" aria-hidden="true">⚽</div>
-                    <div class="feature-title">Sport Garovlari</div>
-                </article>
-                <article class="feature">
-                    <div class="feature-icon" aria-hidden="true">🚀</div>
-                    <div class="feature-title">Aviator</div>
-                </article>
-                <article class="feature">
-                    <div class="feature-icon" aria-hidden="true">💳</div>
-                    <div class="feature-title">Tez To'lovlar</div>
-                </article>
-            </section>
-
-            <p>Bizning platformamiz O'zbekistonda eng ishonchli onlayn kazino va sport garovlari xizmatlarini taqdim etadi. Minglab slot o'yinlari, jonli kazino, sport tikish va crash o'yinlar - barchasi bir joyda!</p>
-
-            <p>Yangi foydalanuvchilar uchun <strong>500% gacha xush kelibsiz bonusi</strong> mavjud. Ro'yxatdan o'tish 1 daqiqa davom etadi. <strong>uzbs</strong> promo kodidan foydalaning va qo'shimcha bonus oling!</p>
-
-            <a href="https://1wpyio.com/?open=register&p=oowe" class="cta-button">Hozir ro'yxatdan o'ting</a>
-
-            <h2>Nima uchun bizni tanlashadi?</h2>
-            <p>Platformamiz Curacao litsenziyasiga ega va xalqaro standartlarga javob beradi. Barcha o'yinlar sertifikatlangan va adolatli natijalarni kafolatlaydi.</p>
-
-            <h2>O'yinlar to'plami</h2>
-            <p>Aviator, Lucky Jet, JetX kabi mashhur crash o'yinlar. Pragmatic Play, NetEnt, Microgaming va boshqa yetakchi provayderlardan 1500 dan ortiq slot. Jonli ruletka, blackjack, baccarat va poker.</p>
-
-            <h2>Tez va xavfsiz to'lovlar</h2>
-            <div class="payment-methods" role="list" aria-label="To'lov usullari">
-                <span class="payment" role="listitem">💳 Payme</span>
-                <span class="payment" role="listitem">💳 Click</span>
-                <span class="payment" role="listitem">💳 UzCard</span>
-                <span class="payment" role="listitem">💳 Humo</span>
+    <section class="games-section">
+        <h2 class="section-title">Mashhur O'yinlar</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="icon">🚀</div>
+                <h3>Aviator</h3>
+                <p>Eng mashhur crash o'yini. Samolyot qanchalik baland uchsa, shuncha ko'p yutasiz!</p>
+                <a href="/aviator.html" class="btn btn-green">O'ynash</a>
             </div>
-            <p>Minimal depozit 10,000 so'm. Pul yechish 15 daqiqadan 24 soatgacha. Komissiyasiz!</p>
-
-            <h2>Mobil ilova</h2>
-            <p>Android va iOS uchun qulay mobil ilova. Istalgan vaqtda, istalgan joyda o'ynang. Ilova tez ishlaydi va kam trafik sarflaydi.</p>
-
-            <a href="https://1wpyio.com/?open=register&p=oowe" class="cta-button">Bonusni olish</a>
+            <div class="game-card">
+                <div class="icon">🛩️</div>
+                <h3>Lucky Jet</h3>
+                <p>Jetpack bilan uchuvchi Lucky Joe. Tez va hayajonli o'yin!</p>
+                <a href="/lucky-jet.html" class="btn btn-green">O'ynash</a>
+            </div>
+            <div class="game-card">
+                <div class="icon">🎰</div>
+                <h3>Slotlar</h3>
+                <p>1500+ slot o'yinlari. Sweet Bonanza, Gates of Olympus va boshqalar!</p>
+                <a href="/slots.html" class="btn btn-green">O'ynash</a>
+            </div>
+            <div class="game-card">
+                <div class="icon">🎴</div>
+                <h3>Live Kazino</h3>
+                <p>Haqiqiy dilerlar bilan jonli ruletka, blackjack, baccarat!</p>
+                <a href="/live-casino.html" class="btn btn-green">O'ynash</a>
+            </div>
+            <div class="game-card">
+                <div class="icon">⚽</div>
+                <h3>Sport Garovlari</h3>
+                <p>Futbol, UFC, tennis, basketbol. Yuqori koeffitsientlar!</p>
+                <a href="/sport.html" class="btn btn-green">Tikish</a>
+            </div>
+            <div class="game-card">
+                <div class="icon">🎁</div>
+                <h3>Bonuslar</h3>
+                <p>500% xush kelibsiz bonus, cashback, bepul aylanishlar!</p>
+                <a href="/bonus.html" class="btn btn-green">Olish</a>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <section class="features-section">
+        <h2 class="section-title">Nima Uchun Bizni Tanlashadi?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🔒</div>
+                <h4>Xavfsiz</h4>
+                <p>Curacao litsenziyasi, SSL shifrlash</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💳</div>
+                <h4>Tez To'lovlar</h4>
+                <p>15 daqiqadan 24 soatgacha</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📱</div>
+                <h4>Mobil Ilova</h4>
+                <p>Android va iOS uchun</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎧</div>
+                <h4>24/7 Yordam</h4>
+                <p>Doimo online qo'llab-quvvatlash</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-content">
+            <h2>TopKazino UZ Haqida</h2>
+            <p>TopKazino UZ - O'zbekistonda eng ishonchli onlayn kazino va sport garovlari platformasi. Biz 2020 yildan beri faoliyat yuritamiz va minglab o'yinchilarga xizmat ko'rsatamiz.</p>
+
+            <p>Platformamizda quyidagilar mavjud:</p>
+            <ul>
+                <li><strong>1500+ slot o'yinlari</strong> - Pragmatic Play, NetEnt, Microgaming</li>
+                <li><strong>Crash o'yinlar</strong> - Aviator, Lucky Jet, JetX</li>
+                <li><strong>Jonli kazino</strong> - ruletka, blackjack, baccarat, poker</li>
+                <li><strong>Sport garovlari</strong> - futbol, UFC, tennis, basketbol</li>
+                <li><strong>Kibersport</strong> - CS2, Dota 2, League of Legends</li>
+            </ul>
+
+            <h2>Bonuslar va Aksiyalar</h2>
+            <p>Yangi o'yinchilar uchun <strong>500% gacha xush kelibsiz bonusi</strong> mavjud. Ro'yxatdan o'tishda <strong>uzbs</strong> promo kodini kiriting va qo'shimcha bonus oling!</p>
+            <ul>
+                <li>500% xush kelibsiz bonus</li>
+                <li>150 bepul aylanish</li>
+                <li>30% haftalik cashback</li>
+                <li>VIP dastur</li>
+            </ul>
+
+            <h2>Xavfsizlik va Litsenziya</h2>
+            <p>Platformamiz Curacao litsenziyasiga ega va xalqaro standartlarga javob beradi. Barcha o'yinlar sertifikatlangan RNG (Random Number Generator) dan foydalanadi va adolatli natijalarni kafolatlaydi.</p>
+        </div>
+    </section>
+
+    <section class="payment-section">
+        <h2 class="section-title">To'lov Usullari</h2>
+        <div class="payment-methods">
+            <span class="payment">💳 Payme</span>
+            <span class="payment">💳 Click</span>
+            <span class="payment">💳 UzCard</span>
+            <span class="payment">💳 Humo</span>
+            <span class="payment">💳 Visa/MC</span>
+            <span class="payment">₿ Crypto</span>
+        </div>
+        <p style="color: #64748b; font-size: 14px;">Minimal depozit: 10,000 so'm | Komissiyasiz | Tez yechish</p>
+    </section>
+
+    <section class="cta-section">
+        <h2>Hozir Boshlang!</h2>
+        <p>500% bonus va 150 bepul aylanish sizni kutmoqda!</p>
+        <a href="https://1wpyio.com/?open=register&p=oowe" class="btn">Ro'yxatdan O'tish</a>
+    </section>
 
     <footer>
+        <div class="footer-links">
+            <a href="/">Bosh sahifa</a>
+            <a href="/aviator.html">Aviator</a>
+            <a href="/lucky-jet.html">Lucky Jet</a>
+            <a href="/slots.html">Slotlar</a>
+            <a href="/sport.html">Sport</a>
+            <a href="/bonus.html">Bonuslar</a>
+            <a href="/registration.html">Ro'yxatdan o'tish</a>
+            <a href="/app.html">Mobil ilova</a>
+            <a href="/faq.html">FAQ</a>
+        </div>
         <p class="footer-text">© 2025 TopKazino UZ. 18+</p>
-        <p class="disclaimer">Ushbu veb-sayt faqat axborot maqsadlarida taqdim etilgan. Biz qimor o'yinlarini o'ynashga undamaymiz. Qimor o'yinlari moliyaviy yo'qotishlarga olib kelishi mumkin. Faqat 18 yoshdan oshganlar uchun. Mas'uliyat bilan o'ynang.</p>
+        <p class="disclaimer">Ushbu veb-sayt faqat axborot maqsadlarida taqdim etilgan. Qimor o'yinlari moliyaviy yo'qotishlarga olib kelishi mumkin. Faqat 18 yoshdan oshganlar uchun. Mas'uliyat bilan o'ynang.</p>
     </footer>
 
 </body>
