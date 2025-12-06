@@ -73,13 +73,13 @@
 
         /* Header */
         header { padding: 20px; text-align: center; }
-        .logo-text { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: 2px; text-decoration: none; display: inline-block; }
-        .logo-text span { color: #22c55e; }
+        .logo-img { height: 60px; width: auto; display: inline-block; }
 
         /* Navigation */
         .main-nav { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 0 10px; }
         .main-nav a { color: #fff; text-decoration: none; font-size: 14px; padding: 10px 16px; border-radius: 25px; transition: all 0.3s; font-weight: 500; }
-        .main-nav a:hover, .main-nav a.active { background: rgba(34, 197, 94, 0.3); color: #22c55e; }
+        .main-nav a:hover, .main-nav a.active { color: #22c55e; }
+        .main-nav a.no-bg:hover, .main-nav a.no-bg.active { background: transparent; color: #22c55e; }
 
         /* Hero Section */
         .hero { padding: 50px 20px; text-align: center; position: relative; overflow: hidden; }
@@ -181,15 +181,15 @@
     <a href="#main-content" class="skip-link">Asosiy kontentga o'tish</a>
 
     <header role="banner">
-        <a href="/" class="logo-text" aria-label="TopKazino bosh sahifa">TOP<span>KAZINO</span></a>
+        <a href="/" aria-label="TopKazino bosh sahifa"><img src="png-transparent-online-casino-roulette-casino-token-casino-game-casino-background-game-text-photography.png" alt="TopKazino logosi" class="logo-img"></a>
         <nav class="main-nav" aria-label="Asosiy navigatsiya">
             <a href="/" class="active">Bosh sahifa</a>
             <a href="/aviator.html">Aviator</a>
             <a href="/lucky-jet.html">Lucky Jet</a>
-            <a href="/slots.html">Slotlar</a>
-            <a href="/live-casino.html">Live Kazino</a>
+            <a href="/slots.html" class="no-bg">Slotlar</a>
+            <a href="/live-casino.html" class="no-bg">Live Kazino</a>
             <a href="/sport.html">Sport</a>
-            <a href="/bonus.html">Bonuslar</a>
+            <a href="/bonus.html" class="no-bg">Bonuslar</a>
         </nav>
     </header>
 
